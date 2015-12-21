@@ -1,0 +1,65 @@
+<template name='registration'>
+
+    <div class='pusher'>
+    {{> header}}
+
+        <div class='ui container'>
+            <div class="ui segment">
+
+                <form class="ui form">
+                    <h4 class="ui dividing header">Information</h4>
+
+                    <div class="field">
+                        <label>Name</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="text" name="reg-firstname" placeholder="First Name">
+                            </div>
+                            <div class="field">
+                                <input type="text" name="reg-lastname" placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Contact Information</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="text" name="reg-email" placeholder="Email Address">
+                            </div>
+                            <div class="field">
+                                <input type="text" name="reg-phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Credentials</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="text" name="reg-username" placeholder="Username">
+                            </div>
+                            <div class="field">
+                                <input type="password" name="reg-password" placeholder="Password">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="ui segment">
+                        <div class="field">
+                            <div class="ui toggle checkbox">
+                                <input type="checkbox" name="gift" tabindex="0" class="hidden">
+                                <label>Do not include a receipt in the package</label>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="ui button blue" tabindex="0">Register</div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</template>

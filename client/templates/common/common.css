@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Bariol;
+    src: url(/font/bariol_serif_regular-webfont.ttf);
+}
+
+.bariol {
+    font-family: 'Bariol', serif;
+    font-size: 15px;
+}
+
+/*
+.karma {
+    font-family: 'Karma', serif;
+    font-size: 15px;
+    font-weight: 300;
+}*/
+
+.nav-bar
+{
+    padding-bottom: 65px;
+}

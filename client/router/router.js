@@ -5,3 +5,7 @@ Router.route('/', function () {
 Router.route('/forums', function () {
     this.render('forum');
 });
+
+Router.route('/registration', function () {
+    this.render('registration');
+});
