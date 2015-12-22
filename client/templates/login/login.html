@@ -1,0 +1,44 @@
+<template name='login'>
+    <div class='pusher'>
+    {{> header}}
+
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h2 class="ui blue image header">
+                    <!--<img src="assets/images/logo.png" class="image">-->
+                    <div class="content">
+                        Log-in to your account
+                    </div>
+                </h2>
+                <form class="ui large form"> <!--loading-->
+                    <div class="ui stacked segment">
+                        <div class='ui container'>
+
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" name="email" placeholder="E-mail address" style="width: 250px;">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input type="password" name="password" placeholder="Password" style="width: 250px;">
+                                </div>
+                            </div>
+
+                            <button class="ui button blue" style="width: 250px;">Log in</button>
+                        </div>
+                    </div>
+
+                    <div class="ui error message"></div>
+                </form>
+
+                <div class="ui message">
+                    Don't have an account? <a href="/registration">Make one here!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

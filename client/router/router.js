@@ -9,3 +9,7 @@ Router.route('/forums', function () {
 Router.route('/registration', function () {
     this.render('registration');
 });
+
+Router.route('/login', function () {
+    this.render('login');
+});
