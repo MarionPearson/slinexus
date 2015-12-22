@@ -12,10 +12,23 @@
                 </div>
 
                 <div class='right menu'>
+
+                {{#if currentUser}}
                     <div class='item'>Welcome&nbsp;{{fullname}}</div>
 
                     <a class='labeled icon item' id='logout'><i class='sign out icon'></i>&nbsp;&nbsp;Logout&nbsp;&nbsp;{{#if isloading}}<span class='ui active mini inline inverted loader'></span>{{/if}}</a>
+
+                {{else}}
+                    <a class='labeled icon item' id='login'><i class='sign in icon'></i>&nbsp;&nbsp;Login&nbsp;&nbsp;</a>
+
+                {{/if}}
+
                 </div>
+
+
+
+
+
             </div>
         </div>
     </div>
