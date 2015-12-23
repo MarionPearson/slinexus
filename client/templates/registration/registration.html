@@ -11,12 +11,26 @@
 
                     <div class="field">
                         <label>Name</label>
+
                         <div class="two fields">
-                            <div class="field">
-                                <input type="text" name="reg-firstname" placeholder="First Name">
+                            <div class="field {{#if invalidFirst}}error{{/if}}">
+                                <input type="text" id="firstName" name="firstName" placeholder="First Name">
+
+                                {{#if invalidFirst}}
+                                    <div class="ui basic red pointing prompt label transition visible" >
+                                        Please enter your first name.
+                                    </div>
+                                {{/if}}
                             </div>
-                            <div class="field">
-                                <input type="text" name="reg-lastname" placeholder="Last Name">
+
+                            <div class="field {{#if invalidLast}}error{{/if}}">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+
+                                {{#if invalidLast}}
+                                    <div class="ui basic red pointing prompt label transition visible" >
+                                        Please enter your last name.
+                                    </div>
+                                {{/if}}
                             </div>
                         </div>
                     </div>
@@ -24,21 +38,50 @@
                     <div class="field">
                         <label>Credentials</label>
 
-                        <div class="field">
-                            <input type="text" name="reg-email" placeholder="Email Address">
+                        <div class="field {{#if invalidEmail}}error{{/if}}">
+                            <input type="email" name="email" placeholder="Email Address">
+
+                            {{#if invalidEmail}}
+                                <div class="ui basic red pointing prompt label transition visible" >
+                                    This email address is invalid.
+                                </div>
+                            {{/if}}
                         </div>
 
-                        <div class="two fields">
-                            <div class="field">
-                                <input type="password" name="reg-password" placeholder="Password">
+                        <div class="two fields {{#if passwordMismatch}}error{{/if}}">
+                            <div class="field {{#if passwordIssue}}error{{/if}}">
+                                <input type="password" name="password" placeholder="Password">
+                                {{#if passwordIssue}}
+                                <div class="ui basic red pointing prompt label transition visible" >
+                                    {{#if passwordMismatch}}
+                                        The passwords do not match.
+                                    {{else}}
+                                        {{#if invalidPass}}
+                                            You must enter a password.
+                                        {{/if}}
+                                    {{/if}}
+                                </div>
+                                {{/if}}
                             </div>
-                            <div class="field">
-                                <input type="password" name="reg-repassword" placeholder="Verify Password">
+                            <div class="field {{#if passwordIssue}}error{{/if}}">
+                                <input type="password" name="rePassword" placeholder="Verify Password">
+                                {{#if passwordIssue}}
+                                <div class="ui basic red pointing prompt label transition visible" >
+                                    {{#if passwordMismatch}}
+                                        The passwords do not match.
+                                    {{else}}
+                                        {{#if invalidRePass}}
+                                            Please re-enter your password.
+                                        {{/if}}
+                                    {{/if}}
+                                </div>
+                                {{/if}}
                             </div>
                         </div>
+
                     </div>
 
-                    <div class="ui button blue fluid" tabindex="0">Register</div>
+                    <input type="submit" class="ui button blue fluid" value="Register">
                 </form>
 
             </div>

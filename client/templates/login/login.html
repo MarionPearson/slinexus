@@ -1,11 +1,11 @@
 <template name='login'>
+
     <div class='pusher'>
     {{> header}}
 
-        <div class="ui middle aligned center aligned grid">
+        <div class="ui center aligned grid">
             <div class="column">
                 <h2 class="ui blue image header">
-                    <!--<img src="assets/images/logo.png" class="image">-->
                     <div class="content">
                         Log-in to your account
                     </div>
@@ -27,10 +27,9 @@
                                 </div>
                             </div>
 
-                            <button class="ui button blue" style="width: 250px;">Log in</button>
+                            <button name="login-btn" id="login-btn" class="ui button blue">Log in</button>
                         </div>
                     </div>
-
                     <div class="ui error message"></div>
                 </form>
 
